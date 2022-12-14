@@ -5,6 +5,9 @@ function calc() {
 
   switch(on){
     case "=":
+      if(disp.innerHTML==""){
+        disp.innerHTML=0
+      }
       try{
         disp.innerHTML=eval(disp.innerHTML);
       }
@@ -15,7 +18,7 @@ function calc() {
     break;
     case "x":disp.innerHTML = disp.innerHTML.slice(0,-1);
     break;
-    case "c":disp.innerHTML = " ";
+    case "c":disp.innerHTML = "";
     break;
     default:
         disp.innerHTML += on;

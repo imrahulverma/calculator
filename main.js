@@ -1,5 +1,4 @@
 clk = document.querySelector(".buttons").addEventListener("click", calc);
-var a;
 var disp=document.querySelector(".display")
 function calc() {
   on = event.target.id;
@@ -11,7 +10,7 @@ function calc() {
       }
       catch{
         
-        disp.innerHTML="Invalid Expression"
+        disp.innerHTML="<span>Invalid Expression</span>"
       }
     break;
     case "x":disp.innerHTML = disp.innerHTML.slice(0,-1);
